@@ -4,19 +4,26 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeroesComponent } from './modules/hero/heroes/heroes.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { EntriesComponent } from './modules/entries/entries.component';
+import { HttpClientModule} from '@angular/common/http';
+import { EntriesService } from './shared/services/entries.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeroesComponent
+    EntriesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    NgbModule
   ],
-  providers: [],
+  providers: [
+    EntriesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
