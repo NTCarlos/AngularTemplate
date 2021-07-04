@@ -1,2 +1,11 @@
-<h1 class="text-center">{{title}}</h1>
-<router-outlet></router-outlet>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 ">
+            <div class="text-center">
+                <h1>{{ title }}</h1>
+                <a routerLink="/entries">Test an API</a>
+            </div>
+        </div>
+    </div>
+    <router-outlet></router-outlet>
+</div>
