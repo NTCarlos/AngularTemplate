@@ -8,6 +8,7 @@ import { EntriesService } from 'src/app/shared/services/entries.service';
   templateUrl: './entries.component.html',
   styleUrls: ['./entries.component.css']
 })
+
 export class EntriesComponent implements OnInit {
 
   constructor(private entriesServices: EntriesService) { }
@@ -16,7 +17,7 @@ export class EntriesComponent implements OnInit {
   count: number;
 
   ngOnInit(): void {
-    // Consume and subscribe the service and get the updated data on real time
+    // Consume and subscribe the service to get the updated data on real time
     this.entriesServices.getAll().subscribe( data => {
       this.entries = data.entries;
       this.count = data.count
